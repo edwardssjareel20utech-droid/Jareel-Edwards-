@@ -1,0 +1,125 @@
+body {
+    font-family: "Times New Roman", Times, serif; 
+    margin: 0; 
+    background-color: #1f3d3a; 
+    color: #ffffff; 
+    line-height: 1.6;
+}
+
+header {
+    background-color: #162c44; 
+    color: white; 
+    padding: 25px; 
+    text-align: center; 
+    border-bottom: 3px solid #3ddc97; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+nav a {
+    color: violet; 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+nav a:hover {
+    color: #3ddc97; 
+}
+
+main {
+    max-width: 850px; 
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 150px; 
+}
+
+.project {
+    background-color: #2a524e; 
+    border-left: 5px solid #3ddc97;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+/* Book Styling */
+.book-item {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: flex-start; 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.book-cover {
+    width: 100px; 
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
+    flex-shrink: 0; 
+}
+
+.book-item h3 {
+    margin-top: 0;
+    color: #3ddc97;
+}
+
+/* --- NEW: Code Laboratory Styling --- */
+pre {
+    background-color: #000000; /* Terminal Black */
+    color: #3ddc97; /* Matrix Green */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Scrollbar for long code lines */
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #3ddc97;
+    margin-top: 15px;
+}
+
+code {
+    font-size: 0.95rem;
+}
+
+/* --- NEW: Courses List Styling --- */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li strong {
+    color: #3ddc97;
+}
+
+/* Global Link Styling */
+a {
+    color: #3ddc97;
+    font-weight: bold;
+}
+
+footer {
+    background-color: aqua;
+    color: #162c44; 
+    text-align: center;
+    padding: 15px; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    font-weight: bold;
+    z-index: 100;
+}
