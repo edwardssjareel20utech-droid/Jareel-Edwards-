@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | Jareel</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* This adds the glow effect to whichever page is 'active' */
+        .nav-link.active {
+            color: #00d4ff !important; /* Bright Cyan */
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.7), 
+                         0 0 20px rgba(0, 212, 255, 0.4);
+            font-weight: bold;
+            border-bottom: 2px solid #00d4ff;
+            transition: all 0.3s ease;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <img src="Photo7.jpg" alt="Photo of Jareel Edwards" class="profile-pic">
         <h1>Let's Connect</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about_me.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="courses.html">Courses</a>
-            <a href="projects.html">Projects</a> 
+        <nav id="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about_me.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="projects.html" class="nav-link">Projects</a> 
         </nav>
     </header>
 
@@ -33,6 +50,20 @@
         <p>&copy; 2026 Created by Jareel J Edwards</p>
         <p>Doing what matters, making it happen</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath === currentPath || (currentPath === "" && linkPath === "index.html")) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
