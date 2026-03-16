@@ -1,3 +1,4 @@
+/* --- GLOBAL STYLES --- */
 body {
     font-family: "Times New Roman", Times, serif; 
     margin: 0; 
@@ -18,7 +19,6 @@ header {
 }
 
 /* --- NAVIGATION & GLOW LOGIC --- */
-
 nav a {
     color: violet; 
     margin: 0 15px; 
@@ -38,14 +38,14 @@ nav a:hover {
 }
 
 /* Active State: The "Permanent" Indicator */
-/* This stays on until they leave the page */
+/* This is triggered by the class added via JavaScript */
 nav a.active {
     color: #3ddc97 !important; 
     text-shadow: 0 0 12px rgba(61, 220, 151, 0.8), 
                  0 0 20px rgba(61, 220, 151, 0.4);
 }
 
-/* Optional: Animated underline for the active page */
+/* Animated underline for the active page */
 nav a.active::after {
     content: '';
     position: absolute;
@@ -57,13 +57,13 @@ nav a.active::after {
     box-shadow: 0 0 10px #3ddc97;
 }
 
-/* --- REST OF YOUR STYLES --- */
-
+/* --- LAYOUT & CONTENT --- */
 main {
     max-width: 850px; 
     margin: 20px auto;
     padding: 20px;
-    padding-bottom: 150px; 
+    /* Added extra bottom padding so footer doesn't cover content */
+    padding-bottom: 180px; 
 }
 
 .project {
@@ -72,6 +72,7 @@ main {
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .profile-pic {
@@ -83,6 +84,7 @@ main {
     margin-bottom: 10px;
 }
 
+/* Book Styling */
 .book-item {
     display: flex;
     gap: 25px;
@@ -106,9 +108,10 @@ main {
     color: #3ddc97;
 }
 
+/* --- CODE LABORATORY --- */
 pre {
-    background-color: #000000; 
-    color: #3ddc97; 
+    background-color: #000000; /* Terminal Black */
+    color: #3ddc97; /* Matrix Green */
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto; 
@@ -121,6 +124,7 @@ code {
     font-size: 0.95rem;
 }
 
+/* --- LISTS & LINKS --- */
 ul {
     list-style-type: square;
     padding-left: 20px;
@@ -134,11 +138,18 @@ ul li strong {
     color: #3ddc97;
 }
 
+/* Global Link Styling */
 a {
     color: #3ddc97;
     font-weight: bold;
+    transition: color 0.2s;
 }
 
+a:hover {
+    color: #ffffff;
+}
+
+/* --- FOOTER --- */
 footer {
     background-color: aqua;
     color: #162c44; 
